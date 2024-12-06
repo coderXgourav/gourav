@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gourav Swarnakar: Innovating the World of Software Engineering</title>
-    <meta name="description" content="Discover the expertise of Gourav Swarnakar, a proficient software engineer known for his innovative solutions and impact in the tech industry.">
-    <meta name="keywords" content="Gourav Swarnakar, software engineer, technology innovation, programming, cloud computing, AI">
-    <link rel="canonical" href="https://example.com/gourav-swarnakar-profile">
+    <title>Gaurav Swarnakar - Best Web Developer in Kolkata</title>
     <meta name="google-site-verification" content="Dm_HPjy6p2Cmi4LrTB-ZqUoH79L-gBEDPDEDyMSAoMo" />
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --text-color: #333;
-            --background-color: #f4f6f7;
+            --primary-color: #1a73e8;
+            --secondary-color: #34a853;
+            --text-primary: #202124;
+            --text-secondary: #5f6368;
+            --background-light: #f8f9fa;
         }
 
         * {
@@ -23,46 +21,60 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Inter', 'Arial', sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
+            color: var(--text-primary);
+            background-color: var(--background-light);
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 2rem;
         }
 
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
+        .profile-header {
+            display: flex;
+            align-items: center;
+            background-color: white;
             padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             margin-bottom: 2rem;
         }
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 2rem;
+            border: 4px solid var(--primary-color);
+        }
+
+        .header-content h1 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
         }
 
         .section {
-            margin-bottom: 2rem;
-            padding: 1rem;
             background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
         }
 
-        .section h2 {
+        .section-title {
             color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
+            border-bottom: 3px solid var(--secondary-color);
             padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .skills-grid {
@@ -72,22 +84,49 @@
         }
 
         .skill-card {
-            background-color: var(--background-color);
-            padding: 1rem;
+            background-color: var(--background-light);
             border-radius: 8px;
+            padding: 1.5rem;
             text-align: center;
             transition: transform 0.3s ease;
         }
 
         .skill-card:hover {
-            transform: scale(1.05);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
         }
 
-        .testimonial {
-            font-style: italic;
-            background-color: var(--background-color);
-            padding: 1rem;
-            border-left: 4px solid var(--secondary-color);
+        .skill-badge {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 20px;
+            margin: 0.2rem;
+            font-size: 0.8rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline-item {
+            border-left: 3px solid var(--primary-color);
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            left: -7px;
+            top: 0;
         }
 
         .contact-links {
@@ -97,133 +136,117 @@
             margin-top: 1rem;
         }
 
-        .contact-links a {
-            color: var(--secondary-color);
+        .contact-link {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
             text-decoration: none;
             padding: 0.5rem 1rem;
-            border-radius: 4px;
-            background-color: var(--background-color);
+            border-radius: 6px;
             transition: background-color 0.3s ease;
         }
 
-        .contact-links a:hover {
+        .contact-link:hover {
             background-color: var(--secondary-color);
-            color: white;
         }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 10px;
+        @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
             }
-            header h1 {
-                font-size: 2rem;
+
+            .profile-photo {
+                margin-right: 0;
+                margin-bottom: 1rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Gourav Swarnakar: Innovating the World of Software Engineering</h1>
-            <p>A Visionary Software Engineer Driving Technological Innovation</p>
+        <header class="profile-header">
+            <img src="/api/placeholder/150/150" alt="Gaurav Swarnakar" class="profile-photo">
+            <div class="header-content">
+                <h1>Gaurav Swarnakar</h1>
+                <p>Best Web Developer in Kolkata | MERN Stack Specialist</p>
+            </div>
         </header>
 
         <section class="section">
-            <h2>Who is Gourav Swarnakar?</h2>
-            <p>Gourav Swarnakar is a software engineer with a passion for developing cutting-edge solutions tailored to solve complex problems. With years of experience in coding, software design, and project management, he has established himself as a trusted name in the tech industry.</p>
+            <h2 class="section-title">Educational Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Madhyamik (10th)</h3>
+                    <p>Completed in 2016 with 62% marks</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Higher Secondary (12th)</h3>
+                    <p>Completed in 2018 with 80% marks</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Computer Science Engineering</h3>
+                    <p>Pursued Computer Science to build strong technical foundation</p>
+                </div>
+            </div>
         </section>
 
         <section class="section">
-            <h2>Professional Journey</h2>
+            <h2 class="section-title">Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <h3>Junior Developer</h3>
-                    <p>Writing efficient, scalable code for web and mobile applications</p>
+                    <h3>Frontend Technologies</h3>
+                    <div>
+                        <span class="skill-badge">HTML</span>
+                        <span class="skill-badge">CSS</span>
+                        <span class="skill-badge">Bootstrap</span>
+                        <span class="skill-badge">Tailwind</span>
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">AJAX</span>
+                        <span class="skill-badge">jQuery</span>
+                        <span class="skill-badge">React</span>
+                        <span class="skill-badge">Next.js</span>
+                    </div>
                 </div>
                 <div class="skill-card">
-                    <h3>Software Engineer</h3>
-                    <p>Leading development of large-scale projects from ideation to deployment</p>
+                    <h3>Backend Technologies</h3>
+                    <div>
+                        <span class="skill-badge">Node.js</span>
+                        <span class="skill-badge">PHP</span>
+                        <span class="skill-badge">Laravel</span>
+                    </div>
                 </div>
                 <div class="skill-card">
-                    <h3>Team Lead</h3>
-                    <p>Managing teams to ensure timely and high-quality project completion</p>
+                    <h3>Databases</h3>
+                    <div>
+                        <span class="skill-badge">MySQL</span>
+                        <span class="skill-badge">MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools & Platforms</h3>
+                    <div>
+                        <span class="skill-badge">GitHub</span>
+                        <span class="skill-badge">Firebase</span>
+                        <span class="skill-badge">C</span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Programming Languages</h3>
-                    <p>Python, Java, JavaScript, C++, C#</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Frameworks</h3>
-                    <p>React, Angular, Django, Node.js, Spring Boot</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Cloud & DevOps</h3>
-                    <p>AWS, Azure, Docker, Kubernetes, Jenkins</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Specialized Domains</h3>
-                    <p>AI, Machine Learning, Cybersecurity</p>
-                </div>
-            </div>
+            <h2 class="section-title">Professional Journey</h2>
+            <p>Started professional journey in 2023, quickly establishing himself as a passionate and skilled web developer in Kolkata. Committed to continuous learning and delivering innovative solutions.</p>
         </section>
 
         <section class="section">
-            <h2>Key Achievements</h2>
-            <ul>
-                <li>Developed e-commerce application increasing client revenue by 30%</li>
-                <li>Optimized system architecture reducing latency by 50%</li>
-                <li>Spearheaded migration of legacy systems to cloud platforms</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h2>Testimonials</h2>
-            <div class="testimonial">
-                <p>"Gourav's ability to find creative solutions is unmatched. He's a true asset to any team."</p>
-                <p><strong>- Anonymous Colleague</strong></p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Connect with Gourav</h2>
+            <h2 class="section-title">Connect with Gaurav</h2>
             <div class="contact-links">
-                <a href="#" target="_blank">LinkedIn</a>
-                <a href="#" target="_blank">GitHub</a>
-                <a href="mailto:gourav@example.com">Email</a>
+                <a href="#" class="contact-link">LinkedIn</a>
+                <a href="#" class="contact-link">Instagram</a>
+                <a href="#" class="contact-link">Facebook</a>
             </div>
         </section>
     </div>
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Gourav Swarnakar",
-        "jobTitle": "Software Engineer",
-        "skills": [
-            "Python", 
-            "Java", 
-            "JavaScript", 
-            "Cloud Computing", 
-            "AI", 
-            "Machine Learning"
-        ],
-        "alumniOf": {
-            "@type": "EducationalOrganization",
-            "name": "Computer Science University"
-        },
-        "url": "https://example.com/gourav-swarnakar",
-        "sameAs": [
-            "https://www.linkedin.com/in/gourav-swarnakar",
-            "https://github.com/gourav-swarnakar"
-        ]
-    }
-    </script>
 </body>
 </html>
