@@ -8,10 +8,10 @@
     --accent-color: #000000;
 }
 
-/* body {
+body {
     user-select: none; 
     pointer-events: none; 
-  } */
+  }
   
 * {
     margin: 0;
@@ -59,7 +59,7 @@ body {
 
 .header-content p {
     color: var(--text-secondary);
-    font-size: 1.2rem;
+    font-size: medium;
 }
 p{
     font-size: small;
@@ -99,6 +99,16 @@ p{
     width: 3px;
     height: 25px;
     background-color: #007bff;
+    animation: blink 0.7s infinite;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.cursor2 {
+    display: inline-block;
+    width: 3px;
+    height: 45px;
+    background-color: #000000;
     animation: blink 0.7s infinite;
     margin-left: 5px;
     vertical-align: middle;
@@ -290,6 +300,10 @@ p{
     }
     .question{
         font-family: cursive !important;
+    }
+    #title2{
+        font-family: inherit !important;
+        font-size: large !important;
     }
 }
 

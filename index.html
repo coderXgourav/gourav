@@ -210,7 +210,15 @@
                
             </div>
         </section>
-         <hr>  <br> <br> <br> <br>  <br> <br>
+         <hr>  <br> <br>  <br>
+
+         <div>
+            <div style="display: flex; justify-content: center; background-color: #ffec38; padding: 25px; border-radius: 5px;"><p style="font-family: cursive; font-size: large; font-weight: bold;" id="title2" >Gourav Swarnakar<span class="cursor2"></span> </p>
+            </div>
+         </div>
+
+
+         <br><br> <br>  <br> 
         <br>
 
         <section class="section" >
@@ -373,16 +381,14 @@
         
         
         <hr><br> <br> <br> <br> <br>
-
-         
-
-
-        
+        <div style="background: #ffec38; padding: 25px; text-align: center;">
+            <small style="text-align: center;">&copy; 2024 Designed & Developed by Gourav Swarnakar</small>
+            </div>        
         
     </div>
    </div>
 
-<!-- 
+
    <script>
     document.addEventListener('contextmenu', function(e) {
       e.preventDefault();
@@ -402,7 +408,7 @@
         e.preventDefault();
       }
     });
-  </script> -->
+  </script>
   
    <script>
     const titles = [
@@ -414,8 +420,11 @@
         'Backend Developer',
         'Youtuber'
     ];
+    
 
     const titleElement = document.getElementById('title');
+
+
     let titleIndex = 0;
     let currentText = titles[0];
     let isDeleting = false;
@@ -457,6 +466,73 @@
 
     // Start the typing animation
     typeTitle();
+
+
+
+
+
+    const titles2 = [
+  "গৌরভ স্বর্ণকার", // Bengali
+  "गौरव स्वर्णकार", // Hindi
+  "گورَو سْوَرْنَکَار", // Urdu
+  "ગૌરવ સ્વર્ણકાર", // Gujarati
+  "ਗੌਰਵ ਸਵਰਨਕਾਰ", // Punjabi (Gurmukhi)
+  "கௌரவ் ஸ்வர்ணகர்", // Tamil
+  "గౌరవ్ స్వర్ణకార్", // Telugu
+  "ಗೌರವ್ ಸ್ವರ್ಣಕಾರ್", // Kannada
+  "ഗൗരവ് സ്വർണ്ണകാര", // Malayalam
+  "ଗୌରବ୍ ସ୍ଵର୍ଣ୍ଣକାର୍", // Odia
+  "गौरव स्वर्णकार", // Marathi
+  "गौरव स्वर्णकार", // Konkani (Devanagari)
+  "গৌৰৱ স্বৰ্ণকাৰ", // Assamese
+  "ᱜᱳᱨᱟᱣ ᱥᱣᱨᱱᱠᱟᱨ", // Santali (Ol Chiki script)
+  "گورَو سْوَرْنَکَار", // Sindhi
+  "गौरव स्वर्णकार", // Bodo
+  "गौरव स्वर्णकार", // Nepali
+  "گورَو سْوَرْنَکَار", // Kashmiri (Perso-Arabic script)
+  "गौरव स्वर्णकार"  // Dogri
+];
+
+    const titleElement2 = document.getElementById('title2');
+
+
+let titleIndex2 = 0;
+let currentText2 = titles2[0];
+let isDeleting2 = false;
+let charIndex2 = currentText2.length;
+
+function typeTitle2() {
+    const title2 = titles2[titleIndex2];
+    
+    if (isDeleting2) {
+        // Deleting characters one by one
+        if (charIndex2 > 0) {
+            currentText2 = title2.slice(0, charIndex2 - 1);
+            charIndex2--;
+        } else {
+            // Move to next title
+            isDeleting2 = false;
+            titleIndex2 = (titleIndex2 + 1) % titles2.length;
+            currentText2 = '';
+            charIndex2 = 0;
+        }
+    } else {
+        // Adding characters one by one
+        if (charIndex2 < title2.length) {
+            currentText2 = title2.slice(0, charIndex2 + 1);
+            charIndex2++;
+        } else {
+            // Start deleting after a pause
+            isDeleting2 = true;
+        }
+    }
+
+    titleElement2.firstChild.textContent = currentText2;
+
+    const speed2 = isDeleting ? 100 : 150;
+    setTimeout(typeTitle2, speed2);
+}
+typeTitle2();
 </script>
 </body>
 </html>
