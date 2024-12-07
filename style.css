@@ -233,12 +233,25 @@ p{
 
 @media (max-width: 768px) {
     .profile-header {
+        margin:auto;
         flex-direction: column;
-        text-align: center;
+        /* text-align: center; */
     }
+    .container{
+        padding: 0;
+
+    }
+    
 
     .profile-photo {
         margin-right: 0;
         margin-bottom: 1.5rem;
     }
 }
+/* @media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+} */
+
