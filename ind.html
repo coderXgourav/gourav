@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Professional Title Transition</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        #title {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            height: 40px;
+            background-color: #007bff;
+            animation: blink 0.7s infinite;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .subtitle {
+            color: #6c757d;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+        <div id="title">Software Developer<span class="cursor"></span></div>
+
+    <script>
+        const titles = [
+            'Software Developer',
+            'Software Engineer', 
+            'Web Developer',
+            'Full Stack Engineer',
+            'Frontend Architect',
+            'Technical Lead'
+        ];
+
+        const titleElement = document.getElementById('title');
+        let titleIndex = 0;
+        let currentText = titles[0];
+        let isDeleting = false;
+        let charIndex = currentText.length;
+
+        function typeTitle() {
+            const title = titles[titleIndex];
+            
+            if (isDeleting) {
+                // Deleting characters one by one
+                if (charIndex > 0) {
+                    currentText = title.slice(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    // Move to next title
+                    isDeleting = false;
+                    titleIndex = (titleIndex + 1) % titles.length;
+                    currentText = '';
+                    charIndex = 0;
+                }
+            } else {
+                // Adding characters one by one
+                if (charIndex < title.length) {
+                    currentText = title.slice(0, charIndex + 1);
+                    charIndex++;
+                } else {
+                    // Start deleting after a pause
+                    isDeleting = true;
+                }
+            }
+
+            // Update the title
+            titleElement.firstChild.textContent = currentText;
+
+            // Set typing speed based on whether adding or removing
+            const speed = isDeleting ? 50 : 100;
+            setTimeout(typeTitle, speed);
+        }
+
+        // Start the typing animation
+        typeTitle();
+    </script>
+</body>
+</html>
