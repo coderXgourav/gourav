@@ -23,7 +23,7 @@
    <div>
      <div class="container" style="background-color: white; ">
         <header class="profile-header">
-            <img src="./3.png" alt="Gaurav Swarnakar" class="profile-photo">
+            <img src="./Picsart_24-12-07_21-31-23-460.png" alt="Gaurav Swarnakar" class="profile-photo">
             <div class="header-content">
                 <h1 id="name">Gourav Swarnakar <span><img src="./check_15889346.png" alt="verify" style="width: 22px; "></span></h1>
                  <div><b id="title" >SOFTWARE ENGINEER<span class="cursor"></span> </b>
@@ -303,7 +303,29 @@
         
     </div>
    </div>
-   
+
+
+   <script>
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      // F12 Key
+      if (e.key === "F12") {
+        e.preventDefault();
+      }
+      // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
+      if (e.ctrlKey && e.shiftKey && ["I", "J", "C","U"].includes(e.key)) {
+        e.preventDefault();
+      }
+      // Ctrl+U (View Source)
+      if (e.ctrlKey && e.key === "u") {
+        e.preventDefault();
+      }
+    });
+  </script>
+  
    <script>
     const titles = [
         'Software Engineer', 
@@ -311,7 +333,8 @@
         'Web Developer',
         'Full Stack Engineer',
         'Frontend Architect',
-        'Backend Developer'
+        'Backend Developer',
+        'Youtuber'
     ];
 
     const titleElement = document.getElementById('title');
