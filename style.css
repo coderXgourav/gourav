@@ -8,10 +8,10 @@
     --accent-color: #000000;
 }
 
-body {
+/* body {
     user-select: none; 
     pointer-events: none; 
-  }
+  } */
   
 * {
     margin: 0;
@@ -285,9 +285,8 @@ p{
         font-size: x-large;
     }
     .profile-photo{
-        width: 150px;
-        height: 150px;
-
+        width: 120px;
+        height: 120px;
     }
     .question{
         font-family: cursive !important;
