@@ -215,7 +215,19 @@ p{
     gap: 1.5rem;
     margin-top: 1.5rem;
 }
-
+#name{
+    font-family: cursive;
+                font-weight: 100;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+}
+#title{
+              color: rgba(254, 138, 5, 0.995);
+                    font-size: 20px;
+                    font-style: italic;
+                    font-family: cursive;
+}
 .contact-link {
     display: inline-block;
     background-color: var(--primary-color);
@@ -241,17 +253,31 @@ p{
         padding: 0;
 
     }
-    
-
     .profile-photo {
         margin-right: 0;
         margin-bottom: 1.5rem;
     }
-}
-/* @media (max-width: 768px) {
-    .profile-header {
-        flex-direction: column;
-        text-align: center;
+
+    .header-content h1{
+        font-family: inherit !important;
     }
-} */
+    p{
+        font-family: inherit !important;
+    }
+    .section-title{
+        font-family: inherit !important;
+
+    }
+    #title{
+        font-family: inherit !important;
+    }
+    .timeline-item h3 {
+        font-family: inherit !important;
+    }
+    #name{
+        font-family: inherit !important;
+        font-size: xx-large;
+    }
+}
+
 
