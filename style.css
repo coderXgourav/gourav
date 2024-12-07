@@ -275,8 +275,14 @@ p{
         font-family: inherit !important;
     }
     #name{
+        font-weight: normal;
         font-family: inherit !important;
         font-size: xx-large;
+    }
+    .profile-photo{
+        width: 150px;
+        height: 150px;
+
     }
 }
 
