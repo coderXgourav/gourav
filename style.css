@@ -275,7 +275,7 @@ p{
         font-family: inherit !important;
     }
     #name{
-        font-weight: normal;
+        font-weight: bold;
         font-family: inherit !important;
         font-size: xx-large;
     }
@@ -283,6 +283,9 @@ p{
         width: 150px;
         height: 150px;
 
+    }
+    .question{
+        font-family: cursive !important;
     }
 }
 
