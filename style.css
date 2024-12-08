@@ -127,7 +127,8 @@ p{
 
 .skill-card {
     background-color:#ffec38;
-    box-shadow: 0px 0px 4px 0px;
+    /* background-color:white; */
+    box-shadow: 0px 0px 2px 0px;
     border-radius: 8px;
     padding: 1.5rem;
     transition: transform 0.3s ease;
@@ -304,6 +305,13 @@ p{
     #title2{
         font-family: inherit !important;
         font-size: large !important;
+    }
+    .skill-card{
+        background-color: white;
+    }
+    #multipleName{
+        background-color: rgba(0,0,0,0.08) !important;
+        border-radius: 0px !important;
     }
 }
 
